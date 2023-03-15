@@ -1,0 +1,27 @@
+li {
+  list-style: none;
+}
+
+* {
+  cursor: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mouse {
+  position: absolute;
+  border-radius: 1500px;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+#cursor {
+  border: 2px solid rgb(250, 0, 12);
+  width: 15px;
+  height: 15px;
+}
+#mouse1 {
+  height: 100px;
+  width: 100px;
+  background: white;
+  transition: 0.15s ease-out;
+}
