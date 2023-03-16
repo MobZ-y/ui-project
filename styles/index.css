@@ -3,9 +3,9 @@ li {
 }
 
 * {
-  cursor: none;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .mouse {
@@ -13,21 +13,19 @@ li {
   border-radius: 1500px;
   transform: translate(-50%, -50%);
   mix-blend-mode: difference;
+  z-index: 50;
 }
 
 #cursor {
-  border: 2px solid rgb(250, 0, 12);
-  width: 15px;
-  height: 15px;
+  background: #2128bd;
+  width: 14px;
+  height: 14px;
 }
 
-#mouse1 {
-  height: 100px;
-  width: 100px;
-  background: white;
-  transition: 0.15s ease-out;
+nav {
+  animation: loadnav 1s ease forwards;
+  transform: translateY(-60px);
 }
-
 nav ul {
   display: flex;
   justify-content: center;
@@ -39,23 +37,63 @@ nav ul li {
   letter-spacing: 1px;
 }
 
+@keyframes loadnav {
+  from {
+    transform: translateY(-60px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
 .main {
   background: url(/img/test2.jpg);
   background-size: cover;
+}
+
+section {
   height: 100vh;
 }
 
 .home-content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin-top: 170px;
+  align-items: center;
+  min-height: 100vh;
 }
 .home-content .home-content-text {
-  font-size: 100px;
+  font-size: 60px;
   color: white;
-  width: 900px;
   padding: 20px;
+  z-index: 1;
+  transform: translateY(250px);
+  animation: loadtitle 2s ease forwards;
+  text-shadow: 2px 1px 2px rgb(0, 0, 0);
 }
-.home-content .home-content-video video {
-  width: 850px;
+.home-content .home-content-img {
+  animation: loadimg 4s ease forwards;
+  opacity: 0;
+}
+.home-content .home-content-img img {
+  width: 240px;
+}
+
+@keyframes loadimg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes loadtitle {
+  from {
+    transform: translateY(250px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+.main2 {
+  background-color: #1f2122;
 }/*# sourceMappingURL=index.css.map */

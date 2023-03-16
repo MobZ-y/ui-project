@@ -3,9 +3,9 @@ li {
 }
 
 * {
-  cursor: none;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .mouse {
@@ -13,15 +13,11 @@ li {
   border-radius: 1500px;
   transform: translate(-50%, -50%);
   mix-blend-mode: difference;
+  z-index: 50;
 }
+
 #cursor {
-  border: 2px solid rgb(250, 0, 12);
-  width: 15px;
-  height: 15px;
-}
-#mouse1 {
-  height: 100px;
-  width: 100px;
-  background: white;
-  transition: 0.15s ease-out;
+  background: #2128bd;
+  width: 14px;
+  height: 14px;
 }

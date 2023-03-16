@@ -1,5 +1,3 @@
-//***********MOUSE */
-
 const mouses = document.querySelectorAll(".mouse");
 
 window.addEventListener("mousemove", (e) => {
